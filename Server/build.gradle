@@ -1,0 +1,13 @@
+apply plugin: 'war'
+
+group 'ru.myt'
+version '1.0-SNAPSHOT'
+
+war {
+    archiveName 'MYTServer.war'
+}
+
+task CUSTOM_TomcatDeploy(type: Copy) {
+    from war
+    into "D:/apache-9/webapps/"
+}
