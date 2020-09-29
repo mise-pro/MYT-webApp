@@ -1,0 +1,26 @@
+apply plugin: "idea"
+
+group 'ru.myt'
+version '1.0b'
+
+
+subprojects {
+    apply plugin: "java"
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25'
+        compile 'javax.servlet:javax.servlet-api:4.0.0'
+        compile 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+    }
+
+}
+

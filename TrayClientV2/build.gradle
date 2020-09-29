@@ -1,0 +1,23 @@
+group 'ru.myt'
+version '1.0'
+
+dependencies {
+    compile project(":Server")
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+task CUSTOM_TrayClientFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "ru.myt.client.tray.StartTrayClient"
+    }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+jar {
+    manifest {
+        attributes(
+                "Main-Class": "ru.myt.client.tray.StartTrayClient",
+                "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
+    }
+}

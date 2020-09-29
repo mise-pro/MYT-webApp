@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StartTrayClient-v2" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="ru.myt.client.tray.StartTrayClient" />
+    <module name="MYT_-_webApp.TrayClientV2.main" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="ru.myt.client.tray.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

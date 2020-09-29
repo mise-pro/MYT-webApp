@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<deviceId>XXX_e7185469-v1</deviceId>
+	<debugMode>true</debugMode>
+	<connectionType>REST</connectionType><!--REST or Local    -->
+	<connectionEndpoint>http://localhost:8080/MYTServer/api/v1</connectionEndpoint>
+</config>
